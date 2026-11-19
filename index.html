@@ -1,0 +1,231 @@
+<!doctype html>
+<!--
+  ═══════════════════════════════════════════════════════════════
+   WHOAMI — personal threat detection for one (1) human
+   the antivirus that already knows who you are.
+   concept, design & code by ghostly.grl ♥
+  ═══════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WHOAMI — personal threat detection</title>
+  <meta name="description" content="WHOAMI scans your device in nine seconds. it found one threat. it's you.">
+  <meta name="author" content="ghostly.grl">
+  <meta name="theme-color" content="#efede8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Courier+Prime:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/home.css?v=2">
+</head>
+<body class="pg-home">
+
+  <!-- ═══ boot: $ whoami ═══ -->
+  <div class="boot" aria-hidden="true">
+    <pre class="boot__log"></pre>
+    <b class="boot__name"></b>
+    <span class="boot__skip">click to skip. you can’t skip the rest.</span>
+  </div>
+
+  <!-- ═══ nav ═══ -->
+  <header class="nav">
+    <a class="nav__logo" href="index.html" data-cursor="home. mine now.">
+      <b class="logo">who<span>am</span>i</b>
+    </a>
+    <p class="nav__live"><i class="dot"></i> watching <b data-who="first">you</b> · <span data-clock>--:--:--</span></p>
+    <nav class="nav__links">
+      <a href="scan.html" data-door data-cursor="full scan">scan</a>
+      <a href="cam.html" data-door data-cursor="say cheese">cam</a>
+      <a href="files.html" data-door data-cursor="your stuff">files</a>
+      <a href="log.html" data-door data-cursor="everything you did">log</a>
+      <a href="nine.html" data-door data-cursor="the other eight">nine</a>
+      <a href="exit.html" data-door data-cursor="try it">exit</a>
+    </nav>
+    <button class="nav__burger" aria-label="menu"><i></i><i></i></button>
+  </header>
+
+  <main>
+
+    <!-- ═══ 01 · hero — a very normal antivirus. for about nine seconds ═══ -->
+    <section class="hero" id="top">
+      <div class="hero__bar mono">
+        <span>WHOAMI® personal threat detection</span>
+        <span>v9.0.9 · build 0309</span>
+        <span>protecting: <b data-who="computer">this device</b></span>
+        <span class="hero__ok"><i class="dot dot--ok"></i> all quiet</span>
+      </div>
+
+      <h1 class="hero__t poster" aria-label="who am i?">
+        <span class="hl"><span>who</span></span>
+        <span class="hl hl--2"><span>am</span><em class="hero__tm mono">®</em></span>
+        <span class="hl hl--3"><span>i?</span></span>
+      </h1>
+
+      <div class="hero__side">
+        <figure class="hero__fig">
+          <pre class="hero__cat" data-cat='{"w":46,"h":22,"mood":"sleep","rest":"sleep"}' data-cursor="let it sleep"></pre>
+          <figcaption class="mono"><b>fig. 0</b> your antivirus. asleep. probably.</figcaption>
+        </figure>
+        <p class="hero__lede">personal threat detection for one (1) human. nine seconds, no installs, nothing leaves your computer. we only&nbsp;<em>look</em>.</p>
+        <button class="btn hero__go" data-magnetic=".25" data-cursor="9 seconds"><span>scan me</span><i>→</i></button>
+        <p class="hero__fine mono">by scanning you agree to be scanned. by not scanning you also agree.</p>
+      </div>
+
+      <!-- the scan -->
+      <div class="scan" aria-live="polite">
+        <div class="scan__head mono"><b>scanning</b><span class="scan__pc">000%</span></div>
+        <div class="scan__bar"><i></i></div>
+        <pre class="scan__log mono"></pre>
+      </div>
+
+      <!-- after the scan: the page is yours no more -->
+      <div class="hero__after" aria-live="assertive">
+        <p class="hero__found poster"><span>1 threat</span><span>found.</span></p>
+        <div class="hero__big">
+          <pre class="hero__bigcat" data-cat='{"w":92,"h":40,"mood":"stare"}'></pre>
+        </div>
+        <p class="hero__say"><span class="hero__q"></span></p>
+        <p class="hero__threat mono">threat · <b data-who="full">you</b> · severity: <em>personal</em></p>
+        <a class="hero__down mono" href="#know" data-cursor="if you’re brave">scroll ↓ if you’re brave</a>
+      </div>
+    </section>
+
+    <!-- ═══ 02 · the worst part of being watched is ███ ═══ -->
+    <section class="know" id="know">
+      <div class="know__pin">
+        <h2 class="know__t type">the worst part<br>of being watched<br>is <span class="rd rd--t" data-end="that it’s polite."><span>that it’s polite.</span></span></h2>
+        <ol class="know__list type" aria-live="polite"></ol>
+        <aside class="know__side">
+          <pre class="know__cat" data-cat='{"w":40,"h":19,"mood":"smug"}'></pre>
+          <p class="know__say serif"></p>
+          <p class="know__n mono"><b class="know__i">00</b>/<span class="know__of">00</span> facts about <span data-who="first">you</span></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═══ 03 · you saw it too, right? ═══ -->
+    <section class="eyes" id="eyes">
+      <h2 class="eyes__t slab"><span>you saw</span><span>it too, right?</span></h2>
+      <pre class="eyes__cat" data-cat='{"w":120,"h":22,"zoom":3.1,"oy":0.1,"mood":"idle"}' data-cursor="it sees you"></pre>
+      <p class="eyes__num slab" data-cursor="don’t call. i’ll call you."><span>1-800-</span><span>WHOAMI</span></p>
+      <p class="eyes__fine mono">only a few people can see it. only a few. the ones who opened this page. can you see it? you can? you are not crazy. no. don’t tell anyone. are you crazy? you aren’t crazy. you can’t be crazy. you are <b data-who="first">you</b>.</p>
+    </section>
+
+    <!-- ═══ 04 · everything is fine. ═══ -->
+    <section class="fine" id="fine">
+      <div class="fine__head">
+        <p class="kick mono" data-scramble>status report · <span data-clock>--:--:--</span></p>
+        <h2 class="fine__t poster"><span>everything</span><span>is fine.</span></h2>
+      </div>
+      <ul class="fine__grid">
+        <li class="card"><b class="card__ok">✓</b><h3>real-time protection</h3><p>on. always on. watching every file you open.</p><span class="mono">module 01</span></li>
+        <li class="card"><b class="card__ok">✓</b><h3>firewall</h3><p>nothing gets in without asking us first.</p><span class="mono">module 02</span></li>
+        <li class="card"><b class="card__ok">✓</b><h3>camera</h3><p>off. the little light is off. look at it.</p><span class="mono">module 03</span></li>
+        <li class="card"><b class="card__ok">✓</b><h3>backups</h3><p>last backup: yesterday. or the day before. it’s fine.</p><span class="mono">module 04</span></li>
+        <li class="card"><b class="card__ok">✓</b><h3>privacy</h3><p>your data stays on <span data-who="computer">your device</span>. where we can see it.</p><span class="mono">module 05</span></li>
+        <li class="card"><b class="card__ok">✓</b><h3>you are alone</h3><p>no one else is using this computer right now.</p><span class="mono">module 06</span></li>
+      </ul>
+      <p class="fine__foot mono">6/6 modules ok · nothing to worry about · keep scrolling</p>
+    </section>
+
+    <!-- ═══ 05 · don't be scared of the cat ═══ -->
+    <section class="scared" id="scared">
+      <p class="scared__top mono"><span>limited edition</span><b>WHOAMI × <span data-who="computer">you</span></b><span>one copy</span></p>
+      <h2 class="scared__t wide"><span>don’t be</span><span>scared of the</span></h2>
+      <div class="scared__stage" data-cursor="pet it">
+        <canvas class="scared__cv" aria-hidden="true"></canvas>
+        <pre class="scared__cat" data-cat='{"w":60,"h":26,"mood":"smug"}'></pre>
+        <span class="sr">cat</span>
+      </div>
+      <ul class="scared__row">
+        <li>purr</li><li>hiss</li><li>bite</li><li>run</li>
+      </ul>
+      <div class="scared__info mono">
+        <p>tonight, <span data-who="time">now</span><br>meet at your screen / leave at never</p>
+        <p><span data-who="city">your city</span>, the room you’re in<br>the chair you’re sitting on</p>
+        <p>no cover · no exit<br>bring nobody</p>
+      </div>
+    </section>
+
+    <!-- ═══ 06 · perhaps you need a backup? ═══ -->
+    <section class="files on-pink" id="files">
+      <h2 class="files__t poster">
+        <span class="files__l1">perhaps you</span>
+        <span class="files__l2">need a <small class="mono">(rm -rf by: the cat)</small></span>
+        <span class="files__l3"><mark>backup?</mark></span>
+      </h2>
+      <div class="term" data-cursor="it’s too late">
+        <div class="term__bar"><i></i><i></i><i></i><b class="mono"><span data-who="user">guest</span> — rm — 80×24</b></div>
+        <pre class="term__out mono"></pre>
+        <div class="term__thumbs">
+          <figure class="slot" data-img="HOME/file-01.jpg" data-desc="a night photo in a car, motion blur, a girl turning to the camera"><figcaption class="mono">IMG_4031.HEIC</figcaption></figure>
+          <figure class="slot" data-img="HOME/file-02.jpg" data-desc="a laptop glowing on an unmade bed in the dark"><figcaption class="mono">IMG_4032.HEIC</figcaption></figure>
+          <figure class="slot" data-img="HOME/file-03.jpg" data-desc="half a face pressed against half a tabby cat"><figcaption class="mono">IMG_4033.HEIC</figcaption></figure>
+        </div>
+        <div class="term__foot">
+          <div class="term__bar2"><i></i></div>
+          <button class="term__stop mono" data-cursor="stop it">stop</button>
+        </div>
+      </div>
+      <p class="files__speak"><b>speak up</b><span>or don’t. i’ll speak for you.</span></p>
+    </section>
+
+    <!-- ═══ 07 · game over ═══ -->
+    <section class="over" id="over">
+      <div class="crt">
+        <pre class="over__cat" data-cat='{"w":54,"h":24,"mood":"dead","rest":"dead"}'></pre>
+        <h2 class="over__t vt">GAME OVER</h2>
+        <p class="over__sub vt">too bad, <span data-who="first">you</span>…<br>try again, if you want…</p>
+        <p class="over__cont vt">CONTINUE? <b class="over__n">9</b></p>
+        <div class="over__btns">
+          <button class="vt over__yes" data-cursor="again">▶ continue</button>
+          <button class="vt over__no" data-cursor="coward">give up</button>
+        </div>
+        <p class="over__lives vt" aria-label="lives left">LIVES <span class="over__hearts">♥♥♥♥♥♥♥♥♥</span></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ footer: a terminal that answers ═══ -->
+  <footer class="ft">
+    <div class="ft__term mono">
+      <pre class="ft__out">type something. the cat is listening.
+try: whoami · help · ls · sudo · rm -rf · exit</pre>
+      <label class="ft__in"><span class="ft__prompt" data-who="prompt">guest@unknown ~ %</span><input type="text" spellcheck="false" autocomplete="off" aria-label="terminal" data-cursor="type"></label>
+    </div>
+    <div class="ft__cols mono">
+      <div><b>pages</b><a href="scan.html" data-door>scan</a><a href="cam.html" data-door>cam</a><a href="files.html" data-door>files</a><a href="log.html" data-door>log</a><a href="nine.html" data-door>nine</a><a href="exit.html" data-door>exit</a></div>
+      <div><b>known about you</b><span data-who="computer">—</span><span><span data-who="city">—</span> · <span data-who="time">—</span></span><span><span data-who="browser">—</span> · <span data-who="cores">—</span> cores</span></div>
+      <div><b>support</b><span>there is no support.</span><span>there is only the cat.</span><span>↑↑↓↓←→←→ b a</span></div>
+    </div>
+    <div class="ft__word poster" aria-hidden="true">whoami</div>
+    <div class="ft__bottom mono">
+      <span>© WHOAMI 2026 · a concept antivirus. nothing was read that your browser didn’t already say.</span>
+      <span class="ft-sign">concept, design &amp; code by ghostly.grl ♥</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/cat.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+  <script src="js/home.js?v=2"></script>
+</body>
+</html>
+<!--
+        /\_/\
+       ( @.@ )      $ whoami
+        > v <       you. obviously.
+       /|###|\
+
+   ┌─┐┬ ┬┌─┐┌─┐┌┬┐┬ ┬ ┬  ┌─┐┬─┐┬
+   │ ┬├─┤│ │└─┐ │ │ └┬┘  │ ┬├┬┘│
+   └─┘┴ ┴└─┘└─┘ ┴ ┴─┘┴ o └─┘┴└─┴─┘ ♥
+
+   WHOAMI · if you're reading this, the cat already read you.
+-->

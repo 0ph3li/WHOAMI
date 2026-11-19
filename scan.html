@@ -1,0 +1,180 @@
+<!doctype html>
+<!--
+  ═══════════════════════════════════════════════════════════════
+   WHOAMI — scan.html · the full scan
+   deeper and deeper. until it finds the cat.
+   concept, design & code by ghostly.grl ♥
+  ═══════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>full scan — WHOAMI</title>
+  <meta name="description" content="the full scan. estimated time: the rest of your life.">
+  <meta name="author" content="ghostly.grl">
+  <meta name="theme-color" content="#efede8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Courier+Prime:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/scan.css?v=2">
+</head>
+<body class="pg-scan">
+
+  <!-- ═══ nav ═══ -->
+  <header class="nav">
+    <a class="nav__logo" href="index.html" data-cursor="home. mine now.">
+      <b class="logo">who<span>am</span>i</b>
+    </a>
+    <p class="nav__live"><i class="dot"></i> watching <b data-who="first">you</b> · <span data-clock>--:--:--</span></p>
+    <nav class="nav__links">
+      <a href="scan.html" class="is-here" aria-current="page" data-cursor="you are here">scan</a>
+      <a href="cam.html" data-door data-cursor="say cheese">cam</a>
+      <a href="files.html" data-door data-cursor="your stuff">files</a>
+      <a href="log.html" data-door data-cursor="everything you did">log</a>
+      <a href="nine.html" data-door data-cursor="the other eight">nine</a>
+      <a href="exit.html" data-door data-cursor="try it">exit</a>
+    </nav>
+    <button class="nav__burger" aria-label="menu"><i></i><i></i></button>
+  </header>
+
+  <main>
+
+    <!-- ═══ 01 · full scan ═══ -->
+    <section class="sh" id="top">
+      <div class="sh__bar mono">
+        <span>deep scan · v9.0.9</span>
+        <span>target: <b data-who="full">you</b></span>
+        <span>device: <b data-who="computer">this device</b></span>
+        <span>est. time: <b>the rest of your life</b></span>
+      </div>
+      <h1 class="sh__t poster" aria-label="full scan">
+        <span class="sh__l"><span>full</span></span>
+        <span class="sh__l sh__l--2"><span>scan</span></span>
+      </h1>
+      <div class="sh__low">
+        <p class="sh__lede type">the quick scan found you. <br>the full scan finds <em>everything else</em>.<br>keep scrolling. every pixel you scroll, it reads one more line of <b data-who="first">you</b>.</p>
+        <figure class="sh__fig">
+          <pre class="sh__cat" data-cat='{"w":44,"h":21,"mood":"stare"}' data-cursor="supervisor"></pre>
+          <figcaption class="mono"><b>fig. 1</b> the scanner. it insisted.</figcaption>
+        </figure>
+        <p class="sh__down mono">scroll = consent ↓</p>
+      </div>
+    </section>
+
+    <!-- ═══ 02 · layers: deeper and deeper (pinned) ═══ -->
+    <section class="ly" id="layers">
+      <div class="ly__pin">
+        <p class="ly__k mono">depth <b class="ly__d">0</b>/5 · <span class="ly__name">surface</span></p>
+        <div class="ly__stage"><div class="ly__zoom">
+          <div class="ly__box" data-l="1"><span class="mono">layer 1 · surface</span></div>
+          <div class="ly__box" data-l="2"><span class="mono">layer 2 · habits</span></div>
+          <div class="ly__box" data-l="3"><span class="mono">layer 3 · body</span></div>
+          <div class="ly__box" data-l="4"><span class="mono">layer 4 · mood</span></div>
+          <div class="ly__box" data-l="5"><span class="mono">layer 5 · core</span></div>
+          <pre class="ly__cat" data-cat='{"w":30,"h":14,"mood":"sleep","rest":"sleep"}'></pre>
+        </div></div>
+        <div class="ly__right">
+          <ol class="ly__read type" aria-live="polite"></ol>
+          <p class="ly__say serif"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 03 · quarantine ═══ -->
+    <section class="qt" id="quarantine">
+      <header class="qt__head">
+        <p class="kick mono">03 · infected items</p>
+        <h2 class="qt__t slab"><span>drag what’s infected</span><span>into quarantine.</span></h2>
+        <p class="qt__fine mono">tap works too. everything is infected. you’ll see.</p>
+      </header>
+      <div class="qt__grid">
+        <ul class="qt__items"></ul>
+        <div class="qt__vault" data-cursor="drop it here">
+          <div class="qt__vbar mono"><b>/quarantine</b><span class="qt__count">0 items</span></div>
+          <div class="qt__in"></div>
+          <p class="qt__empty mono">empty. for now.</p>
+        </div>
+        <aside class="qt__ev">
+          <figure class="slot" data-img="SCAN/evidence-01.jpg" data-desc="a photo found on your computer: a screen photographed with a phone, moiré lines"><figcaption class="mono">evidence 01 · <span data-who="computer">—</span>/Pictures</figcaption></figure>
+          <figure class="slot" data-img="SCAN/evidence-02.jpg" data-desc="a photo found on your computer: a window at night, someone’s reflection"><figcaption class="mono">evidence 02 · also yours</figcaption></figure>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═══ 04 · threat level: stay still ═══ -->
+    <section class="tl" id="threat">
+      <div class="tl__top">
+        <p class="kick mono">04 · live threat level</p>
+        <p class="tl__how mono">measured from how you move. stay still. stillness is safe.</p>
+      </div>
+      <div class="tl__mid">
+        <b class="tl__n poster" aria-live="off">00</b>
+        <div class="tl__side">
+          <pre class="tl__cat" data-cat='{"w":36,"h":17,"mood":"idle"}'></pre>
+          <p class="tl__say serif">move. i dare you.</p>
+        </div>
+      </div>
+      <canvas class="tl__graph" aria-hidden="true"></canvas>
+      <div class="tl__scale mono"><span>00 furniture</span><span>25 human</span><span>50 nervous</span><span>75 guilty</span><span>99 <b data-who="first">you</b></span></div>
+    </section>
+
+    <!-- ═══ 05 · the report ═══ -->
+    <section class="rp" id="report">
+      <div class="rp__left">
+        <p class="kick mono">05 · scan complete</p>
+        <h2 class="rp__t poster"><span>threats</span><span>found:</span><span class="rp__one">1</span></h2>
+        <div class="rp__btns">
+          <button class="btn rp__print" data-magnetic=".2" data-cursor="keep it"><span>print report</span><i>⎙</i></button>
+          <button class="btn btn--ghost rp__again" data-magnetic=".2" data-cursor="again?"><span>scan again</span><i>↺</i></button>
+        </div>
+      </div>
+      <div class="rp__printer">
+        <div class="rp__slot"><i></i></div>
+        <div class="rp__paper"><pre class="rp__receipt mono"></pre></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ footer: a terminal that answers ═══ -->
+  <footer class="ft">
+    <div class="ft__term mono">
+      <pre class="ft__out">type something. the cat is listening.
+try: whoami · help · ls · sudo · rm -rf · exit</pre>
+      <label class="ft__in"><span class="ft__prompt" data-who="prompt">guest@unknown ~ %</span><input type="text" spellcheck="false" autocomplete="off" aria-label="terminal" data-cursor="type"></label>
+    </div>
+    <div class="ft__cols mono">
+      <div><b>pages</b><a href="scan.html" data-door>scan</a><a href="cam.html" data-door>cam</a><a href="files.html" data-door>files</a><a href="log.html" data-door>log</a><a href="nine.html" data-door>nine</a><a href="exit.html" data-door>exit</a></div>
+      <div><b>known about you</b><span data-who="computer">—</span><span><span data-who="city">—</span> · <span data-who="time">—</span></span><span><span data-who="browser">—</span> · <span data-who="cores">—</span> cores</span></div>
+      <div><b>support</b><span>there is no support.</span><span>there is only the cat.</span><span>↑↑↓↓←→←→ b a</span></div>
+    </div>
+    <div class="ft__word poster" aria-hidden="true">whoami</div>
+    <div class="ft__bottom mono">
+      <span>© WHOAMI 2026 · a concept antivirus. nothing was read that your browser didn’t already say.</span>
+      <span class="ft-sign">concept, design &amp; code by ghostly.grl ♥</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/cat.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+  <script src="js/scan.js?v=2"></script>
+</body>
+</html>
+<!--
+        /\_/\
+       ( @.@ )      $ whoami
+        > v <       you. obviously.
+       /|###|\
+
+   ┌─┐┬ ┬┌─┐┌─┐┌┬┐┬ ┬ ┬  ┌─┐┬─┐┬
+   │ ┬├─┤│ │└─┐ │ │ └┬┘  │ ┬├┬┘│
+   └─┘┴ ┴└─┘└─┘ ┴ ┴─┘┴ o └─┘┴└─┴─┘ ♥
+
+   WHOAMI · scan complete. threats found: 1. it's still you.
+-->

@@ -1,0 +1,128 @@
+/* ═══════════════════════════════════════════════════════════════
+   WHOAMI — exit.css · try to leave
+   concept, design & code by ghostly.grl ♥
+
+   an exit sign in infection pink, and five doors.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════ 00 · exit ═══════════════ */
+.xh { position: relative; min-height: 100vh; min-height: 100svh; padding: 62px var(--pad) var(--pad); display: flex; flex-direction: column; background: var(--ink); color: var(--paper); overflow: hidden; }
+.xh__bar { display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: 16px; padding: 8px 0; border-top: 1px solid #3a3a3a; border-bottom: 1px solid #3a3a3a; color: #a9a6a0; }
+.xh__bar b { color: var(--paper); font-weight: 700; }
+.xh__n { color: var(--pink) !important; }
+.sign { align-self: center; margin: auto 0; display: flex; align-items: center; gap: .1em; padding: .06em .14em .02em; border: .045em solid var(--pink); font-size: clamp(110px, min(24vw, 40vh), 440px); color: var(--pink); box-shadow: 0 0 .25em rgba(255, 31, 155, .35), inset 0 0 .2em rgba(255, 31, 155, .25); text-shadow: 0 0 .12em rgba(255, 31, 155, .7); animation: neon 6s steps(1) infinite; }
+.sign__t { font-size: 1em; line-height: .82; }
+.sign__a { font-size: .7em; line-height: 1; font-stretch: 100%; }
+@keyframes neon { 0%, 100% { opacity: 1; } 31% { opacity: 1; } 32% { opacity: .25; } 33% { opacity: 1; } 34% { opacity: .4; } 35%, 77% { opacity: 1; } 78% { opacity: .2; } 80% { opacity: 1; } }
+.sign.is-off { animation: none; opacity: .12; }
+.xh__low { display: flex; justify-content: space-between; align-items: end; gap: 4vw; }
+.xh__lede { font-size: clamp(17px, 1.6vw, 24px); line-height: 1.35; }
+.xh__lede em { font-style: normal; background: var(--pink); color: var(--ink); padding: 0 .2em; }
+.xh__down { font-size: 13px; font-weight: 700; border-bottom: 2px solid var(--paper); margin-right: 16vw; }
+
+/* ═══════════════ doors ═══════════════ */
+.door { position: relative; min-height: 100vh; min-height: 100svh; padding: 12vh var(--pad); display: grid; grid-template-columns: minmax(240px, .8fr) 1.2fr; gap: 5vw; align-items: center; border-top: 1.5px solid var(--ink); }
+.door.is-ink { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.door__head { display: flex; flex-direction: column; gap: 14px; }
+.door__n { font-size: clamp(120px, 15vw, 260px); line-height: .8; color: var(--pink); -webkit-text-stroke: 2px var(--ink); }
+.door.is-ink .door__n { -webkit-text-stroke: 0; }
+.door__t { font-size: clamp(36px, 4.6vw, 80px); line-height: .9; }
+.door__s { color: var(--grey); font-size: 12px; }
+.door.is-tried .door__t { text-decoration: line-through; text-decoration-color: var(--pink); text-decoration-thickness: .12em; }
+/* the frame: a doorway */
+.door__frame { position: relative; justify-self: center; width: min(560px, 100%); min-height: 64vh; border: 2px solid currentColor; border-bottom: 0; display: grid; place-items: center; padding: 30px; }
+.door__frame::before { content: ''; position: absolute; left: -20px; right: -20px; bottom: 0; height: 2px; background: currentColor; }
+
+/* a big plain button */
+.xbtn { display: inline-flex; align-items: center; gap: 14px; padding: 18px 26px; border: 2px solid currentColor; font: 800 clamp(18px, 1.8vw, 26px)/1 var(--f-poster); text-transform: uppercase; transition: background .2s, color .2s; }
+.xbtn__x { font-size: 1.6em; line-height: .6; color: var(--pink); }
+.xbtn:hover { background: var(--pink); color: var(--ink); }
+.xbtn:hover .xbtn__x { color: var(--ink); }
+
+/* door 1: leave site? */
+.leave { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(13,13,13,.12); }
+.leave[hidden] { display: none; }
+.leave__box { width: min(400px, 92%); background: #fff; color: var(--ink); border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,.3); padding: 20px 22px 18px; font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+.leave__t { font-size: 17px; font-weight: 600; }
+.leave__p { margin-top: 6px; font-size: 13.5px; line-height: 1.45; color: #444; }
+.leave__p .mono { color: var(--pink-d); font-size: 11px; }
+.leave__btns { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
+.leave__b { min-width: 86px; padding: 7px 14px; border-radius: 7px; font: 500 13.5px/1 -apple-system, 'Helvetica Neue', Arial, sans-serif; border: 1px solid #ccc; background: #fff; transition: transform .18s var(--ease); }
+.leave__b--stay { background: #1a73e8; color: #fff; border-color: #1a73e8; }
+
+/* door 2: terminal */
+.d2__term { position: absolute; left: 30px; right: 30px; top: 30px; min-height: 40%; white-space: pre-wrap; font-size: 13px; line-height: 1.6; text-transform: none; color: #bdbab3; }
+.d2__term b { color: var(--pink); font-weight: 700; }
+.d2__term em { color: var(--paper); font-style: normal; }
+.d2__cur { color: var(--pink); font-style: normal; animation: blink .8s steps(2) infinite; }
+.door--2 .xbtn { position: relative; margin-top: 36vh; }
+
+/* door 3: wizard */
+.wiz { width: 100%; max-width: 480px; background: #fbfaf6; border: 1.5px solid var(--ink); box-shadow: 10px 10px 0 var(--ink); color: var(--ink); }
+.wiz__bar { display: flex; align-items: center; gap: 6px; padding: 8px 12px; border-bottom: 1.5px solid var(--ink); }
+.wiz__bar i { width: 11px; height: 11px; border: 1.5px solid var(--ink); border-radius: 50%; }
+.wiz__bar i:first-child { background: var(--pink); }
+.wiz__bar b { margin-left: 10px; }
+.wiz__step { margin-left: auto; color: var(--grey); }
+.wiz__body { padding: 24px 22px; min-height: 250px; font: 400 15px/1.45 var(--f-type); }
+.wiz__body h3 { font: 800 26px/1 var(--f-poster); text-transform: uppercase; margin-bottom: 12px; }
+.wiz__body label { display: flex; gap: 10px; align-items: center; padding: 6px 0; cursor: pointer; }
+.wiz__body input[type=checkbox] { appearance: none; -webkit-appearance: none; width: 16px; height: 16px; border: 1.5px solid var(--ink); flex: none; }
+.wiz__body input[type=checkbox]:checked { background: var(--pink); box-shadow: inset 0 0 0 3px #fbfaf6; }
+.wiz__bar2 { height: 16px; border: 1.5px solid var(--ink); margin: 16px 0 10px; padding: 2px; }
+.wiz__bar2 i { display: block; height: 100%; width: 0; background: var(--pink); }
+.wiz__log { font: 400 12px/1.6 var(--f-mono); text-transform: none; height: 120px; overflow: hidden; }
+.wiz__log b { color: var(--pink-d); }
+.wiz__btns { display: flex; justify-content: flex-end; gap: 8px; padding: 0 22px 18px; }
+.wiz__b { padding: 8px 16px; border: 1.5px solid var(--ink); font-weight: 700; font-size: 12px; }
+.wiz__next { background: var(--ink); color: var(--paper); }
+.wiz__b:disabled { opacity: .3; }
+
+/* door 4: the plug */
+.wall { position: relative; width: 100%; height: 300px; overflow: hidden; }
+.socket { position: absolute; right: 8%; top: 50%; width: 120px; height: 150px; margin-top: -75px; border: 2px solid var(--paper); border-radius: 14px; display: flex; justify-content: center; align-items: center; gap: 26px; background: #1b1b1b; }
+.socket i { width: 12px; height: 34px; background: #000; border: 1.5px solid #555; border-radius: 3px; }
+.plug { position: absolute; right: calc(8% + 120px - 18px); top: 50%; width: 110px; height: 80px; margin-top: -40px; touch-action: none; user-select: none; will-change: transform; z-index: 2; }
+.plug__body { position: absolute; inset: 0; background: var(--paper); border: 2px solid var(--paper); border-radius: 10px 4px 4px 10px; }
+.plug__body::after { content: ''; position: absolute; left: 14px; top: 14px; bottom: 14px; width: 4px; background: repeating-linear-gradient(180deg, var(--ink) 0 3px, transparent 3px 7px); }
+.plug__prong { position: absolute; right: -26px; width: 30px; height: 10px; background: #bdbab3; border-radius: 2px; }
+.plug__prong:nth-child(1) { top: 20px; }
+.plug__prong:nth-child(2) { bottom: 20px; }
+.plug__cable { position: absolute; right: 100%; top: 50%; width: 60vw; height: 14px; margin-top: -7px; background: var(--paper); border-radius: 7px 0 0 7px; }
+.plug.is-out .plug__body { background: var(--pink); border-color: var(--pink); }
+.dark { position: fixed; inset: 0; z-index: 185; background: #000; display: grid; place-items: center; align-content: center; gap: 24px; text-align: center; color: var(--paper); }
+.dark[hidden] { display: none; }
+.dark__cat { font-size: min(1.4vw, 16px); opacity: 0; transition: opacity 1.4s; }
+.dark.is-eyes .dark__cat { opacity: 1; }
+.dark__cat .cf, .dark__cat .ce, .dark__cat .ck, .dark__cat .cm, .dark__cat .cn { color: #000; }
+.dark__cat .ci, .dark__cat .cp { color: var(--pink); }
+.dark__cat .ch { color: #fff; }
+.dark__say { font: italic 400 clamp(22px, 2.4vw, 36px)/1.2 var(--f-serif); color: var(--pink); min-height: 1.3em; padding: 0 20px; }
+.dark__back { color: #6d6b66; border-bottom: 1px solid #6d6b66; opacity: 0; transition: opacity .6s; }
+.dark.is-eyes .dark__back { opacity: 1; }
+
+/* door 5: goodbye */
+.door--5 { grid-template-columns: minmax(240px, .8fr) 1.2fr; }
+.bye { display: flex; flex-direction: column; align-items: flex-start; gap: 4vh; }
+.bye__cat { font-size: min(.62vw, 8px); }
+.bye__txt { font: italic 400 clamp(24px, 2.6vw, 42px)/1.25 var(--f-serif); min-height: 5em; }
+.bye__txt p { margin-bottom: .3em; }
+.bye__txt em { font-style: normal; background: var(--pink); padding: 0 .15em; }
+.end { position: fixed; inset: 0; z-index: 186; background: var(--ink); color: #bdbab3; display: flex; flex-direction: column; justify-content: center; padding: var(--pad); font: 400 clamp(13px, 1.2vw, 16px)/1.7 var(--f-mono); white-space: pre-wrap; opacity: 0; transition: opacity 1.2s; }
+.end.is-on { opacity: 1; }
+.end b { color: var(--paper); }
+.end a { color: var(--pink); border-bottom: 1px solid var(--pink); align-self: flex-start; margin-top: 18px; }
+
+/* ═══════════════ mobile ═══════════════ */
+@media (max-width: 860px) {
+  .xh__bar { grid-template-columns: 1fr 1fr; }
+  .xh__low { flex-direction: column; align-items: flex-start; }
+  .xh__down { margin: 0; }
+  .door, .door--5 { grid-template-columns: 1fr; gap: 4vh; }
+  .door__frame { min-height: 58vh; padding: 20px; }
+  .d2__term { left: 16px; right: 16px; top: 16px; font-size: 11px; }
+  .socket { right: 4%; }
+  .plug { right: calc(4% + 120px - 18px); }
+  .bye__cat { font-size: 1.6vw; }
+}
+.door { overflow-x: clip; }

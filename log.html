@@ -1,0 +1,147 @@
+<!doctype html>
+<!--
+  ═══════════════════════════════════════════════════════════════
+   WHOAMI — log.html · the log
+   everything you did here, written down while you did it.
+   concept, design & code by ghostly.grl ♥
+  ═══════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>log — WHOAMI</title>
+  <meta name="description" content="everything you did on this site. written down. by the cat.">
+  <meta name="author" content="ghostly.grl">
+  <meta name="theme-color" content="#efede8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Courier+Prime:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/log.css?v=2">
+</head>
+<body class="pg-log">
+
+  <!-- ═══ nav ═══ -->
+  <header class="nav">
+    <a class="nav__logo" href="index.html" data-cursor="home. mine now.">
+      <b class="logo">who<span>am</span>i</b>
+    </a>
+    <p class="nav__live"><i class="dot"></i> watching <b data-who="first">you</b> · <span data-clock>--:--:--</span></p>
+    <nav class="nav__links">
+      <a href="scan.html" data-door data-cursor="full scan">scan</a>
+      <a href="cam.html" data-door data-cursor="say cheese">cam</a>
+      <a href="files.html" data-door data-cursor="your stuff">files</a>
+      <a href="log.html" class="is-here" aria-current="page" data-cursor="you are here">log</a>
+      <a href="nine.html" data-door data-cursor="the other eight">nine</a>
+      <a href="exit.html" data-door data-cursor="try it">exit</a>
+    </nav>
+    <button class="nav__burger" aria-label="menu"><i></i><i></i></button>
+  </header>
+
+  <main>
+
+    <!-- ═══ 01 · log (it writes while you read) ═══ -->
+    <section class="lh" id="top">
+      <div class="lh__bar mono">
+        <span>/var/log/<b data-who="user">you</b>.log</span>
+        <span>since <b class="lh__since">—</b></span>
+        <span>entries <b class="lh__n">0</b></span>
+        <span class="lh__rec"><i class="dot"></i> writing</span>
+      </div>
+      <div class="lh__grid">
+        <div class="lh__left">
+          <h1 class="lh__t poster" aria-label="log"><span>log</span></h1>
+          <p class="lh__lede type">everything you did here.<br>written down <em>while you did it</em>.<br>move. it writes. stop. it writes that too.</p>
+        </div>
+        <div class="lh__stream">
+          <div class="lh__sbar mono"><b>tail -f</b><span>live</span></div>
+          <ol class="lh__out mono" aria-live="off"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 02 · the numbers ═══ -->
+    <section class="nu" id="numbers">
+      <p class="kick mono">02 · all time · <span class="nu__v">1</span> pages opened</p>
+      <ul class="nu__grid"></ul>
+    </section>
+
+    <!-- ═══ 03 · your drawing ═══ -->
+    <section class="dr" id="drawing">
+      <div class="dr__head">
+        <p class="kick mono">03 · your mouse, this session</p>
+        <h2 class="dr__t slab"><span>you drew this</span><span>while reading.</span></h2>
+        <p class="dr__fine mono"><span class="dr__pts">0</span> points · every line is where your hand went. every dot is a click.</p>
+      </div>
+      <div class="dr__frame">
+        <canvas class="dr__cv" aria-label="the path of your mouse"></canvas>
+        <i class="dr__you" aria-hidden="true"></i>
+        <p class="dr__empty mono">nothing yet. move your mouse around the site, then come back.</p>
+      </div>
+      <div class="dr__low">
+        <p class="dr__say serif"></p>
+        <button class="btn dr__play" data-magnetic=".2" data-cursor="watch yourself"><span>replay me</span><i>▶</i></button>
+      </div>
+    </section>
+
+    <!-- ═══ 04 · the diary ═══ -->
+    <section class="di" id="diary">
+      <div class="di__head">
+        <p class="kick mono">04 · dear diary</p>
+        <h2 class="di__t poster"><span>dear</span><span>diary,</span></h2>
+        <p class="di__by serif">by cat.exe. about <span data-who="first">you</span>.</p>
+      </div>
+      <ol class="di__list"></ol>
+    </section>
+
+    <!-- ═══ 05 · forget me ═══ -->
+    <section class="fg" id="forget">
+      <pre class="fg__cat" data-cat='{"w":46,"h":22,"mood":"sad"}'></pre>
+      <h2 class="fg__t poster"><span>forget</span><span>me.</span></h2>
+      <p class="fg__p type">this one is real. everything the site remembers about you lives in your browser: your name, your visits, this log. press the button and it’s gone.</p>
+      <button class="btn fg__go" data-magnetic=".2" data-cursor="for real"><span>clear my history</span><i>✕</i></button>
+    </section>
+
+  </main>
+
+  <!-- ═══ footer: a terminal that answers ═══ -->
+  <footer class="ft">
+    <div class="ft__term mono">
+      <pre class="ft__out">type something. the cat is listening.
+try: whoami · help · ls · sudo · rm -rf · exit</pre>
+      <label class="ft__in"><span class="ft__prompt" data-who="prompt">guest@unknown ~ %</span><input type="text" spellcheck="false" autocomplete="off" aria-label="terminal" data-cursor="type"></label>
+    </div>
+    <div class="ft__cols mono">
+      <div><b>pages</b><a href="scan.html" data-door>scan</a><a href="cam.html" data-door>cam</a><a href="files.html" data-door>files</a><a href="log.html" data-door>log</a><a href="nine.html" data-door>nine</a><a href="exit.html" data-door>exit</a></div>
+      <div><b>known about you</b><span data-who="computer">—</span><span><span data-who="city">—</span> · <span data-who="time">—</span></span><span><span data-who="browser">—</span> · <span data-who="cores">—</span> cores</span></div>
+      <div><b>support</b><span>there is no support.</span><span>there is only the cat.</span><span>↑↑↓↓←→←→ b a</span></div>
+    </div>
+    <div class="ft__word poster" aria-hidden="true">whoami</div>
+    <div class="ft__bottom mono">
+      <span>© WHOAMI 2026 · a concept antivirus. nothing was read that your browser didn’t already say.</span>
+      <span class="ft-sign">concept, design &amp; code by ghostly.grl ♥</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/cat.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+  <script src="js/log.js?v=2"></script>
+</body>
+</html>
+<!--
+        /\_/\
+       ( @.@ )      $ whoami
+        > v <       you. obviously.
+       /|###|\
+
+   ┌─┐┬ ┬┌─┐┌─┐┌┬┐┬ ┬ ┬  ┌─┐┬─┐┬
+   │ ┬├─┤│ │└─┐ │ │ └┬┘  │ ┬├┬┘│
+   └─┘┴ ┴└─┘└─┘ ┴ ┴─┘┴ o └─┘┴└─┴─┘ ♥
+
+   WHOAMI · this comment has been logged.
+-->

@@ -1,0 +1,112 @@
+/* ═══════════════════════════════════════════════════════════════
+   WHOAMI — cam.css · incoming call
+   concept, design & code by ghostly.grl ♥
+
+   a video call with the cat, photocopied. your face comes back
+   as characters, the same ones the cat is made of.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════ 01 · incoming call ═══════════════ */
+.in { position: relative; min-height: 100vh; min-height: 100svh; padding: 62px var(--pad) var(--pad); display: flex; flex-direction: column; overflow: hidden; }
+.in__bar { display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: 16px; padding: 8px 0; border-top: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
+.in__bar b { font-weight: 700; }
+.in__ring .dot { background: var(--pink); animation: blink .5s steps(2) infinite; }
+.in__t { font-size: clamp(90px, min(19vw, 30vh), 360px); line-height: .8; margin-top: 3vh; }
+.in__l { display: block; overflow: hidden; padding-top: .03em; }
+.in__l > span { display: inline-block; }
+.in__l--2 { padding-left: 1.4em; }
+.in__l--2 > span { color: var(--pink); -webkit-text-stroke: 2px var(--ink); }
+.in.is-ringing .in__l--2 > span { animation: ring 1.1s steps(1) infinite; }
+@keyframes ring { 0%, 40% { transform: none; } 5% { transform: translateX(-7px) rotate(-1.5deg); } 10% { transform: translateX(7px) rotate(1.5deg); } 15% { transform: translateX(-5px); } 20% { transform: translateX(5px); } 25% { transform: none; } }
+.in__low { margin-top: auto; display: grid; grid-template-columns: 1fr auto; gap: 4vw; align-items: end; padding-top: 3vh; }
+.in__who { display: flex; gap: 22px; align-items: end; }
+.in__ava { position: relative; border: 1.5px solid var(--ink); background: var(--paper); padding: 12px 6px 4px; }
+.in__ava::before, .in__ava::after { content: ''; position: absolute; inset: -1.5px; border: 1.5px solid var(--pink); opacity: 0; pointer-events: none; }
+.in.is-ringing .in__ava::before { animation: pulse 1.1s var(--ease) infinite; }
+.in.is-ringing .in__ava::after { animation: pulse 1.1s var(--ease) .35s infinite; }
+@keyframes pulse { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.35); } }
+.in__cat { font-size: min(.62vw, 8px); }
+.in__from { font-size: clamp(17px, 1.6vw, 24px); line-height: 1.3; max-width: 26ch; }
+.in__from b { background: var(--ink); color: var(--paper); padding: 0 .2em; }
+.in__act { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; max-width: 420px; }
+.in__fine { flex-basis: 100%; text-align: right; color: var(--grey); }
+.btn--ghost { background: transparent; color: var(--ink); }
+.in__yes { background: var(--pink); color: var(--ink); }
+.in__yes:hover { background: var(--ink); color: var(--pink); }
+
+/* ═══════════════ 02 · the call ═══════════════ */
+.call { position: relative; min-height: 100vh; min-height: 100svh; background: var(--ink); color: var(--paper); padding: 74px var(--pad) var(--pad); display: flex; flex-direction: column; gap: 16px; }
+.call__top { display: flex; justify-content: space-between; gap: 16px; padding-bottom: 8px; border-bottom: 1px solid #3a3a3a; color: #a9a6a0; }
+.call__top b { color: var(--paper); }
+.call__rec { color: var(--pink); }
+.call__rec .dot { background: var(--pink); animation: blink 1s steps(2) infinite; }
+.call__time { font-variant-numeric: tabular-nums; color: var(--paper); }
+.call__grid { flex: 1; display: grid; grid-template-columns: 1fr minmax(260px, 27vw); gap: 16px; min-height: 0; }
+.tile { position: relative; overflow: hidden; border: 1.5px solid #3a3a3a; display: grid; place-items: center; }
+.tile--you { background: var(--paper); color: var(--ink); min-height: 58vh; }
+.tile__you { font: 700 var(--fs, 8px)/1 var(--f-mono); letter-spacing: 0; white-space: pre; text-transform: none; user-select: none; }
+.tile__you .p { color: var(--pink); }
+.tile__wait { position: absolute; inset: 0; display: grid; place-items: center; padding: 20px; color: var(--ink-2); font-size: 13px; line-height: 1.6; text-align: center; }
+.tile--you.is-live .tile__wait { display: none; }
+.tile--you.is-off .tile__you { opacity: .06; }
+.tile--you.is-cat .tile__you { color: var(--pink); }
+.tile__cap { position: absolute; left: 10px; bottom: 10px; display: flex; gap: 10px; align-items: center; padding: 4px 8px; background: var(--ink); color: var(--paper); z-index: 3; }
+.tile__mic { display: flex; gap: 2px; align-items: flex-end; height: 12px; }
+.tile__mic i { width: 3px; height: 2px; background: var(--pink); transition: height .08s; }
+.tile--cat { background: var(--pink); aspect-ratio: 4 / 3; }
+.tile__cat { font-size: min(.5vw, 7px); }
+.tile--cat .tile__cap { background: var(--ink); }
+.call__side { display: flex; flex-direction: column; gap: 16px; }
+.call__hud { border: 1px solid #3a3a3a; }
+.call__hud li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 12px; border-bottom: 1px solid #262626; color: #8d8b86; }
+.call__hud li:last-child { border: 0; }
+.call__hud b { color: var(--paper); font-weight: 700; text-align: right; }
+.call__hud b.is-hot { color: var(--pink); }
+.call__say { font: italic 400 clamp(24px, 2.6vw, 40px)/1.15 var(--f-serif); color: var(--pink); min-height: 1.3em; text-align: center; }
+.call__ctl { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.ctl { display: inline-flex; gap: 8px; align-items: center; padding: 11px 18px; border: 1.5px solid #4a4a4a; color: var(--paper); font-size: 12px; font-weight: 700; transition: background .2s, color .2s, border-color .2s; }
+.ctl b { font-size: 14px; }
+.ctl:hover, .ctl.is-on { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.ctl--end { background: var(--pink); color: var(--ink); border-color: var(--pink); }
+.ctl--end:hover { background: var(--paper); }
+.call.is-flash::after { content: ''; position: absolute; inset: 0; background: #fff; animation: snap .5s ease-out forwards; pointer-events: none; z-index: 5; }
+@keyframes snap { from { opacity: 1; } to { opacity: 0; } }
+.call__count { position: absolute; inset: 0; display: grid; place-items: center; font: 900 30vh/1 var(--f-poster); font-stretch: 62%; color: var(--pink); z-index: 4; pointer-events: none; -webkit-text-stroke: 3px var(--ink); }
+.call.is-ended .call__grid, .call.is-ended .call__ctl { opacity: .15; pointer-events: none; transition: opacity .6s; }
+
+/* ═══════════════ 03 · mugshot ═══════════════ */
+.mug { padding: 14vh var(--pad); }
+.mug__grid { display: grid; grid-template-columns: auto 1fr; gap: 5vw; align-items: center; margin-top: 4vh; }
+.mug__card { position: relative; width: min(560px, 46vw); aspect-ratio: 4 / 5; border: 1.5px solid var(--ink); background: var(--paper-2); overflow: hidden; box-shadow: 10px 10px 0 var(--ink); transform: rotate(-1.5deg); display: grid; place-items: center; }
+.mug__lines { position: absolute; inset: 0 0 54px; background: repeating-linear-gradient(180deg, transparent 0 calc(10% - 1px), rgba(13,13,13,.35) calc(10% - 1px) 10%); }
+.mug__lines::after { content: '7′\a 6′\a 5′\a 4′\a 3′\a 2′\a 1′'; white-space: pre; position: absolute; right: 8px; top: 6%; font: 700 10px/7.1 var(--f-mono); color: rgba(13,13,13,.5); }
+.mug__you { position: relative; font: 700 var(--fs, 6px)/1 var(--f-mono); white-space: pre; text-transform: none; margin-bottom: 54px; }
+.mug__cat { position: absolute; right: -3%; bottom: 54px; font: 700 5.5px/1 var(--f-mono); white-space: pre; color: var(--ink); }
+.mug__cat .ce, .mug__cat .ci { color: var(--pink); }
+.mug__plate { position: absolute; left: 0; right: 0; bottom: 0; height: 54px; display: flex; flex-direction: column; justify-content: center; padding: 0 14px; background: var(--ink); color: var(--paper); }
+.mug__name { font: 900 22px/1 var(--f-poster); font-stretch: 62%; text-transform: uppercase; color: var(--pink); }
+.mug__meta { font-size: 10px; color: #a9a6a0; margin-top: 3px; }
+.mug__t { font-size: clamp(40px, 5.6vw, 96px); line-height: .9; }
+.mug__t span { display: block; }
+.mug__t span:last-child { color: var(--pink); -webkit-text-stroke: 1.5px var(--ink); }
+.mug__p { margin-top: 3vh; font-size: clamp(15px, 1.3vw, 19px); max-width: 38ch; }
+.mug__btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4vh; }
+
+/* ═══════════════ mobile ═══════════════ */
+@media (max-width: 860px) {
+  .in__bar { grid-template-columns: 1fr 1fr; }
+  .in__low { grid-template-columns: 1fr; }
+  .in__who { flex-direction: column; align-items: flex-start; }
+  .in__cat { font-size: 1.6vw; }
+  .in__act { justify-content: flex-start; }
+  .in__fine { text-align: left; }
+  .call__grid { grid-template-columns: 1fr; }
+  .tile--you { min-height: 46vh; }
+  .call__side { flex-direction: row; }
+  .tile--cat { flex: 1; aspect-ratio: auto; min-height: 150px; }
+  .tile__cat { font-size: 1.1vw; }
+  .call__hud { flex: 1; font-size: 9px; }
+  .call__hud li { padding: 5px 8px; }
+  .mug__grid { grid-template-columns: 1fr; }
+  .mug__card { width: 100%; }
+}

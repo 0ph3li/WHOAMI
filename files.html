@@ -1,0 +1,172 @@
+<!doctype html>
+<!--
+  ═══════════════════════════════════════════════════════════════
+   WHOAMI — files.html · your files
+   everything on your computer, organised by someone who isn’t you.
+   concept, design & code by ghostly.grl ♥
+  ═══════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>your files — WHOAMI</title>
+  <meta name="description" content="everything on your computer. organised by someone who isn’t you.">
+  <meta name="author" content="ghostly.grl">
+  <meta name="theme-color" content="#efede8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Courier+Prime:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/files.css?v=2">
+</head>
+<body class="pg-files">
+
+  <!-- ═══ nav ═══ -->
+  <header class="nav">
+    <a class="nav__logo" href="index.html" data-cursor="home. mine now.">
+      <b class="logo">who<span>am</span>i</b>
+    </a>
+    <p class="nav__live"><i class="dot"></i> watching <b data-who="first">you</b> · <span data-clock>--:--:--</span></p>
+    <nav class="nav__links">
+      <a href="scan.html" data-door data-cursor="full scan">scan</a>
+      <a href="cam.html" data-door data-cursor="say cheese">cam</a>
+      <a href="files.html" class="is-here" aria-current="page" data-cursor="you are here">files</a>
+      <a href="log.html" data-door data-cursor="everything you did">log</a>
+      <a href="nine.html" data-door data-cursor="the other eight">nine</a>
+      <a href="exit.html" data-door data-cursor="try it">exit</a>
+    </nav>
+    <button class="nav__burger" aria-label="menu"><i></i><i></i></button>
+  </header>
+
+  <main>
+
+    <!-- ═══ 01 · your files (someone else moves them) ═══ -->
+    <section class="fh" id="top">
+      <div class="fh__bar mono">
+        <span>~/<b data-who="user">you</b></span>
+        <span>on <b data-who="computer">this device</b></span>
+        <span class="fh__state">owner: <b data-who="first">you</b></span>
+        <span>last opened: <b>just now. by me.</b></span>
+      </div>
+      <h1 class="fh__t poster" aria-label="your files">
+        <span class="fh__l"><span>your</span></span>
+        <span class="fh__l fh__l--2"><span class="fh__word">files</span><span class="fh__ghost mono">[moved]</span></span>
+      </h1>
+      <div class="fh__low">
+        <p class="fh__lede type">everything on <b data-who="computer">your computer</b>.<br>organised by someone who <em>isn’t you</em>.</p>
+        <div class="fh__dir" data-cursor="private">
+          <span class="ico ico--folder"></span>
+          <b class="mono">/cat</b>
+          <span class="mono fh__n">0 items</span>
+        </div>
+      </div>
+      <i class="intruder" aria-hidden="true"></i>
+    </section>
+
+    <!-- ═══ 02 · the desktop ═══ -->
+    <section class="dk" id="desktop">
+      <header class="dk__head">
+        <p class="kick mono">02 · ~/Desktop</p>
+        <h2 class="dk__t slab"><span>your desktop.</span><span>i’ve been tidying.</span></h2>
+        <p class="dk__fine mono">open things. drag things. look away and i move them.</p>
+      </header>
+      <div class="dk__win">
+        <div class="dk__bar mono"><i></i><i></i><i></i><b>Desktop — <span data-who="computer">this device</span></b><span class="dk__count">0 items</span></div>
+        <div class="dk__area" data-cursor="your mess"></div>
+      </div>
+    </section>
+
+    <!-- ═══ 03 · sorted by the cat ═══ -->
+    <section class="so" id="sorted">
+      <p class="kick mono">03 · i made folders for you</p>
+      <h2 class="so__t poster"><span>sorted</span><span>by the cat</span></h2>
+      <ol class="so__list"></ol>
+    </section>
+
+    <!-- ═══ 04 · storage ═══ -->
+    <section class="st" id="storage">
+      <div class="st__head">
+        <p class="kick mono">04 · storage</p>
+        <h2 class="st__t slab"><span>your disk is</span><span>almost full.</span></h2>
+        <p class="st__sub type">of me.</p>
+      </div>
+      <div class="st__box">
+        <div class="st__top mono"><b data-who="computer">this device</b><span class="st__cap">—</span></div>
+        <div class="st__bar"></div>
+        <ul class="st__leg mono"></ul>
+        <div class="st__btns">
+          <button class="btn st__opt" data-magnetic=".2" data-cursor="trust me"><span>optimise storage</span><i>↯</i></button>
+          <p class="st__fine mono">the numbers at the top are real. your browser told me how much room it has. the rest i made up. or did i.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 05 · trash ═══ -->
+    <section class="tr" id="trash">
+      <div class="tr__left">
+        <p class="kick mono">05 · trash</p>
+        <h2 class="tr__t poster"><span>empty</span><span>the trash?</span></h2>
+        <p class="tr__p type">things you threw away. drag a file from the desktop onto the trash and it ends up here too.</p>
+        <button class="btn tr__go" data-magnetic=".2" data-cursor="permanently"><span>empty trash</span><i>✕</i></button>
+      </div>
+      <div class="tr__bin">
+        <div class="tr__bar mono"><b>trash</b><span class="tr__n">0 items</span></div>
+        <ul class="tr__list mono"></ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- quick look: opens a file -->
+  <div class="ql" role="dialog" aria-modal="true" aria-label="file preview" hidden>
+    <div class="ql__box">
+      <div class="ql__bar mono"><i class="ql__x" data-cursor="close"></i><i></i><i></i><b class="ql__name">file</b><span class="ql__kind">—</span></div>
+      <div class="ql__body"></div>
+      <div class="ql__cat">
+        <pre class="ql__pre" data-cat='{"w":30,"h":14,"mood":"smug"}'></pre>
+        <p class="ql__say serif"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ footer: a terminal that answers ═══ -->
+  <footer class="ft">
+    <div class="ft__term mono">
+      <pre class="ft__out">type something. the cat is listening.
+try: whoami · help · ls · sudo · rm -rf · exit</pre>
+      <label class="ft__in"><span class="ft__prompt" data-who="prompt">guest@unknown ~ %</span><input type="text" spellcheck="false" autocomplete="off" aria-label="terminal" data-cursor="type"></label>
+    </div>
+    <div class="ft__cols mono">
+      <div><b>pages</b><a href="scan.html" data-door>scan</a><a href="cam.html" data-door>cam</a><a href="files.html" data-door>files</a><a href="log.html" data-door>log</a><a href="nine.html" data-door>nine</a><a href="exit.html" data-door>exit</a></div>
+      <div><b>known about you</b><span data-who="computer">—</span><span><span data-who="city">—</span> · <span data-who="time">—</span></span><span><span data-who="browser">—</span> · <span data-who="cores">—</span> cores</span></div>
+      <div><b>support</b><span>there is no support.</span><span>there is only the cat.</span><span>↑↑↓↓←→←→ b a</span></div>
+    </div>
+    <div class="ft__word poster" aria-hidden="true">whoami</div>
+    <div class="ft__bottom mono">
+      <span>© WHOAMI 2026 · a concept antivirus. nothing was read that your browser didn’t already say.</span>
+      <span class="ft-sign">concept, design &amp; code by ghostly.grl ♥</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/cat.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+  <script src="js/files.js?v=2"></script>
+</body>
+</html>
+<!--
+        /\_/\
+       ( @.@ )      $ whoami
+        > v <       you. obviously.
+       /|###|\
+
+   ┌─┐┬ ┬┌─┐┌─┐┌┬┐┬ ┬ ┬  ┌─┐┬─┐┬
+   │ ┬├─┤│ │└─┐ │ │ └┬┘  │ ┬├┬┘│
+   └─┘┴ ┴└─┘└─┘ ┴ ┴─┘┴ o └─┘┴└─┴─┘ ♥
+
+   WHOAMI · 0 files deleted. all files kept. by me.
+-->

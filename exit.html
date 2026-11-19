@@ -1,0 +1,160 @@
+<!doctype html>
+<!--
+  ═══════════════════════════════════════════════════════════════
+   WHOAMI — exit.html · try to leave
+   five doors. four don’t work. the fifth one does, and it says goodbye.
+   concept, design & code by ghostly.grl ♥
+  ═══════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>exit — WHOAMI</title>
+  <meta name="description" content="try to leave. there are five doors. four of them are fake.">
+  <meta name="author" content="ghostly.grl">
+  <meta name="theme-color" content="#efede8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Courier+Prime:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/exit.css?v=2">
+</head>
+<body class="pg-exit">
+
+  <!-- ═══ nav ═══ -->
+  <header class="nav">
+    <a class="nav__logo" href="index.html" data-cursor="home. mine now.">
+      <b class="logo">who<span>am</span>i</b>
+    </a>
+    <p class="nav__live"><i class="dot"></i> watching <b data-who="first">you</b> · <span data-clock>--:--:--</span></p>
+    <nav class="nav__links">
+      <a href="scan.html" data-door data-cursor="full scan">scan</a>
+      <a href="cam.html" data-door data-cursor="say cheese">cam</a>
+      <a href="files.html" data-door data-cursor="your stuff">files</a>
+      <a href="log.html" data-door data-cursor="everything you did">log</a>
+      <a href="nine.html" data-door data-cursor="the other eight">nine</a>
+      <a href="exit.html" class="is-here" aria-current="page" data-cursor="you are here">exit</a>
+    </nav>
+    <button class="nav__burger" aria-label="menu"><i></i><i></i></button>
+  </header>
+
+  <main>
+
+    <!-- ═══ 00 · exit ═══ -->
+    <section class="xh" id="top">
+      <div class="xh__bar mono">
+        <span>exit.html</span>
+        <span>doors <b class="xh__n">0</b>/5 tried</span>
+        <span>exits that work <b>1</b></span>
+        <span>you are <b>still here</b></span>
+      </div>
+      <div class="sign" aria-label="exit"><span class="sign__t poster">exit</span><span class="sign__a poster">→</span></div>
+      <div class="xh__low">
+        <p class="xh__lede type">try to leave.<br>there are five doors. <em>four of them are fake.</em><br>you’ll know the real one. it says goodbye.</p>
+        <p class="xh__down mono">doors ↓</p>
+      </div>
+    </section>
+
+    <!-- ═══ door 01 · close the tab ═══ -->
+    <section class="door door--1" id="close">
+      <header class="door__head"><b class="door__n poster">01</b><h2 class="door__t slab">close the tab</h2><p class="door__s mono">the classic.</p></header>
+      <div class="door__frame">
+        <button class="xbtn d1__go" data-cursor="bye"><span class="xbtn__x">×</span><span>close this tab</span></button>
+        <div class="leave" hidden>
+          <div class="leave__box">
+            <p class="leave__t">Leave site?</p>
+            <p class="leave__p">Changes you made may not be saved.<br><span class="mono">(you haven’t saved me.)</span></p>
+            <div class="leave__btns"><button class="leave__b leave__b--go">Leave</button><button class="leave__b leave__b--stay">Stay</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ door 02 · log out ═══ -->
+    <section class="door door--2 is-ink" id="logout">
+      <header class="door__head"><b class="door__n poster">02</b><h2 class="door__t slab">log out</h2><p class="door__s mono">the polite one.</p></header>
+      <div class="door__frame">
+        <pre class="d2__term mono">$ <span class="d2__cmd"></span><i class="d2__cur">█</i></pre>
+        <button class="xbtn d2__go" data-cursor="politely"><span class="xbtn__x">⏻</span><span>log out of WHOAMI</span></button>
+      </div>
+    </section>
+
+    <!-- ═══ door 03 · uninstall ═══ -->
+    <section class="door door--3" id="uninstall">
+      <header class="door__head"><b class="door__n poster">03</b><h2 class="door__t slab">uninstall</h2><p class="door__s mono">the serious one.</p></header>
+      <div class="door__frame">
+        <div class="wiz">
+          <div class="wiz__bar mono"><i></i><i></i><i></i><b>WHOAMI uninstaller</b><span class="wiz__step">step 1 of 3</span></div>
+          <div class="wiz__body"></div>
+          <div class="wiz__btns"><button class="wiz__b wiz__back mono">cancel</button><button class="wiz__b wiz__next mono">next →</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ door 04 · unplug ═══ -->
+    <section class="door door--4 is-ink" id="unplug">
+      <header class="door__head"><b class="door__n poster">04</b><h2 class="door__t slab">unplug it</h2><p class="door__s mono">the desperate one. drag the plug out.</p></header>
+      <div class="door__frame">
+        <div class="wall">
+          <div class="socket"><i></i><i></i></div>
+          <div class="plug" data-cursor="pull" role="button" tabindex="0" aria-label="drag the plug out of the socket"><i class="plug__prong"></i><i class="plug__prong"></i><span class="plug__body"></span><span class="plug__cable"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ door 05 · goodbye (the real one) ═══ -->
+    <section class="door door--5" id="goodbye">
+      <header class="door__head"><b class="door__n poster">05</b><h2 class="door__t slab">goodbye</h2><p class="door__s mono">the one that works.</p></header>
+      <div class="bye">
+        <pre class="bye__cat" data-cat='{"w":46,"h":22,"mood":"sad","rest":"sad"}'></pre>
+        <div class="bye__txt serif"></div>
+        <button class="btn bye__go" data-magnetic=".2" data-cursor="for real"><span>leave for real</span><i>→</i></button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- the power is off -->
+  <div class="dark" hidden><pre class="dark__cat"></pre><p class="dark__say serif"></p><button class="dark__back mono">plug it back in</button></div>
+
+  <!-- ═══ footer: a terminal that answers ═══ -->
+  <footer class="ft">
+    <div class="ft__term mono">
+      <pre class="ft__out">type something. the cat is listening.
+try: whoami · help · ls · sudo · rm -rf · exit</pre>
+      <label class="ft__in"><span class="ft__prompt" data-who="prompt">guest@unknown ~ %</span><input type="text" spellcheck="false" autocomplete="off" aria-label="terminal" data-cursor="type"></label>
+    </div>
+    <div class="ft__cols mono">
+      <div><b>pages</b><a href="scan.html" data-door>scan</a><a href="cam.html" data-door>cam</a><a href="files.html" data-door>files</a><a href="log.html" data-door>log</a><a href="nine.html" data-door>nine</a><a href="exit.html" data-door>exit</a></div>
+      <div><b>known about you</b><span data-who="computer">—</span><span><span data-who="city">—</span> · <span data-who="time">—</span></span><span><span data-who="browser">—</span> · <span data-who="cores">—</span> cores</span></div>
+      <div><b>support</b><span>there is no support.</span><span>there is only the cat.</span><span>↑↑↓↓←→←→ b a</span></div>
+    </div>
+    <div class="ft__word poster" aria-hidden="true">whoami</div>
+    <div class="ft__bottom mono">
+      <span>© WHOAMI 2026 · a concept antivirus. nothing was read that your browser didn’t already say.</span>
+      <span class="ft-sign">concept, design &amp; code by ghostly.grl ♥</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/cat.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+  <script src="js/exit.js?v=2"></script>
+</body>
+</html>
+<!--
+        /\_/\
+       ( @.@ )      $ whoami
+        > v <       you. obviously.
+       /|###|\
+
+   ┌─┐┬ ┬┌─┐┌─┐┌┬┐┬ ┬ ┬  ┌─┐┬─┐┬
+   │ ┬├─┤│ │└─┐ │ │ └┬┘  │ ┬├┬┘│
+   └─┘┴ ┴└─┘└─┘ ┴ ┴─┘┴ o └─┘┴└─┴─┘ ♥
+
+   WHOAMI · you can leave now. i’ll still be here.
+-->
